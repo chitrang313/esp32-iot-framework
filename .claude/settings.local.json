@@ -1,0 +1,7 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(New-Item -ItemType Directory -Force \"C:\\\\Users\\\\Chitr\\\\Desktop\\\\Temp\\\\Wifi-Connection-Module\\\\Network\")"
+    ]
+  }
+}

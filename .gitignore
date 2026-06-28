@@ -1,0 +1,13 @@
+# Credentials — never commit real secrets
+secrets.h
+
+# Arduino IDE build artefacts
+build/
+*.bin
+*.elf
+*.hex
+*.map
+
+# OS noise
+.DS_Store
+Thumbs.db
