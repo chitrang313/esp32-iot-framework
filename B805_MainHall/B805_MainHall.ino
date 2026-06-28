@@ -28,15 +28,19 @@
 #include <WiFi.h>
 #include <Firebase_ESP_Client.h>
 
-// ─── Wi-Fi credentials (entered at firmware download) ────────────────────
-const char* WIFI_SSID     = "📡";
-const char* WIFI_PASSWORD = "password";
+// ─── Credentials loaded from secrets.h (git-ignored, never committed) ────
+// Copy secrets.h.example → secrets.h and fill in values before flashing.
+#include "secrets.h"
+
+// ─── Wi-Fi credentials ───────────────────────────────────────────────────
+const char* WIFI_SSID     = SECRET_WIFI_SSID;
+const char* WIFI_PASSWORD = SECRET_WIFI_PASSWORD;
 
 // ─── Firebase project & dedicated device account ─────────────────────────
-#define API_KEY        "REDACTED_GOOGLE_API_KEY"
-#define DATABASE_URL   "REDACTED_FIREBASE_DB_URL"
-#define USER_EMAIL     "REDACTED_EMAIL"
-#define USER_PASSWORD  ""
+#define API_KEY       SECRET_FB_API_KEY
+#define DATABASE_URL  SECRET_FB_DB_URL
+#define USER_EMAIL    SECRET_FB_EMAIL
+#define USER_PASSWORD SECRET_FB_PASSWORD
 
 // ─── Relay GPIO pins (active LOW: digitalWrite LOW = relay ON) ────────────
 #define RELAY1_PIN  23    // main light 111
